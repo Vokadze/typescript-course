@@ -1,6 +1,8 @@
 const totalPrice = ({ price, discount, isInstallment, months }) => {
     if (isInstallment === true) {
         return (price - (price / 100 * discount)) / months
+    } else {
+        return (price / months)
     }
 };
 
